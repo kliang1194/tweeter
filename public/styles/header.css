@@ -1,4 +1,4 @@
-header {
+.profile-header {
   width: 100%;
   background-color: #6699CC;
   background: url(../images/abstract-background.jpeg);
@@ -9,12 +9,12 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5px;
   font-family: sans-serif;
   color: white;
+  padding: 10px;
 }
 
-.name {
+.user-name {
   margin-top: -30px
 }
 

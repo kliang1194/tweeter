@@ -28,7 +28,7 @@ html {
 
 main {
   display: flex;
-  width: 90%;
+  width: 100%;
   background-color: #f4f1ec;
   flex-direction: column;
   font-family: sans-serif;

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -30,29 +31,32 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
+
+  <!--Page Content-->
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top navigation bar (fixed) -->
     <nav>
       <span class="a">Tweeter</span>
       <span class="b">Write a new tweet<i class="fas fa-angle-double-down" style= "color: red"></i></span>
     </nav>
 
     <!-- Header-->
-    <header>
-      <div class="image">
+    <header class="profile-header">
+      <div class="user-image">
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
-      <div class="name">
+      <div class="user-name">
           <h2><b>Kyle</b> Liang</h2>
       </div>
   </header>
 
     <!-- Page-specific (main) content here -->
+    <main class="main-container">
+    
+      <!--HTML for creating new tweet-->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
-        <!-- <label for="tweet-text">What are you humming about?</label> -->
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div>
           <button type="submit">Tweet</button>
@@ -60,4 +64,32 @@
         </div>
       </form>
     </section>
+    
+    <!--HTML for displaying created tweets-->
+    <section class="tweet-container">
+      <article class="tweet">
+        <header class="tweet-header">
+          <div class="user-profile">
+            <img class="user-icon" src="/images/Newton.png"> 
+            <h4 class="user-name">Newton</h4>
+          </div>
+          <div>
+            <h4 class="user-handle">@SirIsaac</h4>
+          </div>
+        </header>
+        <div class="tweet-text">
+          If I have seen further it is by standing on the shoulders of giants
+        </div>
+        <footer class="tweet-footer">
+          <span class="tweet-date">10 days ago</span>
+          <div class="tweet-response">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+    </section>
+</main>
   </body>
+  </html>
