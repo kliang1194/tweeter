@@ -37,9 +37,12 @@ textarea {
   font-family: "Bungee", sans-serif;
   font-size: 24px;
   margin-top: 5px;
-
 }
 .new-tweet button:hover {  
   background-color: lightsteelblue;
+}
+
+.invalid {
+  color: red
 }
 
