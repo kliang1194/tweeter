@@ -1,0 +1,42 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  font-size: 50px;
+  font-family: 'Bungee', sans-serif;
+  color: #FFFF;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;  
+  z-index: 1;
+  top: 0;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+span {
+  display: flex;
+  font-weight: 400;
+}
+
+.a {
+  display: flex;
+  text-align: end;
+  flex-wrap: wrap;
+  font-family: 'Bungee', sans-serif;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.b {
+  display: flex;
+  font-family: sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-weight: 400;
+  font-size: 24px;
+  align-items: center;
+}
