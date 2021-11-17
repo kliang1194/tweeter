@@ -36,8 +36,17 @@ $(document).ready(function() {
 
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
-    const newTweet = $(this).serialize();
-    $.post("/tweets/", newTweet);
+    const maxChar = 140;
+    const inputLength = $(this).find("#tweet-text").val().length;
+    
+    if (!inputLength) {
+      return alert("Please enter text before submitting a new Tweet!");
+    } else if (inputLength - maxChar > 0) {
+      return alert("Please reduce your tweent content to less than or equal to 140 characters!");
+    } else {
+      const newTweet = $(this).serialize();
+      $.post("/tweets/", newTweet);
+    }
   });
 
   const renderTweets = function(tweets) {
@@ -77,7 +86,7 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.get("/tweets/", function(newTweet) {
       renderTweets(newTweet);
-    }); 
+    });
   };
 
   loadTweets();
