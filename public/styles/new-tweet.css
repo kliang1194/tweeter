@@ -50,7 +50,7 @@ textarea {
     display: flex;
     border: 3px solid red;
     justify-content: space-around;
-    color: black;
+    color: red;
     padding: 20px;
     font-size: 20px;
     font-family: sans-serif;
