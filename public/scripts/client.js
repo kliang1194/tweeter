@@ -33,10 +33,15 @@ $(document).ready(function() {
     }
   ];
 
+  $("#new-tweet-form").submit(function(event) {
+    event.preventDefault();
+    const tweet = $(this).serialize();
+    $.post("/tweets/", tweet);
+  });
+
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      console.log($tweet);
       $('#tweets-container').append($tweet);
     }
   };
