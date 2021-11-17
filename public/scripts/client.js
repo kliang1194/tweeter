@@ -34,6 +34,13 @@ $(document).ready(function() {
   //   }
   // ];
 
+  //Escape function to re-encode text so that unsafe characters are converted into a safe "encoded" representation//
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const renderTweets = function(tweets) {
     $('#tweets-container').empty();
     for (let tweet of tweets) {
@@ -56,7 +63,7 @@ $(document).ready(function() {
           </div>
         </header>
         <div class="tweet-text">
-          ${tweetData.content.text}
+          ${escape(tweetData.content.text)}
         </div>
         <footer class="tweet-footer">
           <span class="tweet-date">${timeago.format(tweetData.created_at)}</span>
@@ -71,32 +78,32 @@ $(document).ready(function() {
   };
 
   const loadTweets = function() {
-    $.ajax("/tweets/", {method: "GET", dataType: "json",})
-    .then((newTweet) => {
+    $.get("/tweets/", function(newTweet) {
       renderTweets(newTweet.reverse());
     });
   };
 
-loadTweets();
 
-$("#new-tweet-form").submit(function(event) {
-  event.preventDefault();
-  const maxChar = 140;
-  const inputLength = $(this).find("#tweet-text").val().length;
+  loadTweets();
+
+  $("#new-tweet-form").submit(function(event) {
+    event.preventDefault();
+    const maxChar = 140;
+    const inputLength = $(this).find("#tweet-text").val().length;
   
-  if (!inputLength) {
-    return alert("Please enter text before submitting a new Tweet!");
-  }
+    if (!inputLength) {
+      return alert("Please enter text before submitting a new Tweet!");
+    }
   
-  if (inputLength - maxChar > 0) {
-    return alert("Please reduce your tweent content to less than or equal to 140 characters!");
-  }
-  const newTweet = $(this).serialize();
-  $.post("/tweets/", newTweet, () => {
-    $(this).find("#tweet-text").val("");
-    $(this).find(".counter").val(maxChar);
-    loadTweets();
+    if (inputLength - maxChar > 0) {
+      return alert("Please reduce your tweent content to less than or equal to 140 characters!");
+    }
+    const newTweet = $(this).serialize();
+    $.post("/tweets/", newTweet, () => {
+      $(this).find("#tweet-text").val("");
+      $(this).find(".counter").val(maxChar);
+      loadTweets();
+    });
   });
-});
 
 });
