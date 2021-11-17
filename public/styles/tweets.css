@@ -1,8 +1,9 @@
-.tweet-container {
+section#tweets-container {
   width: 90%;
   display:flex;
   background-color:#f4f1ec;
   font-family: sans-serif;
+  flex-direction: column;
 }
 
 .tweet {
