@@ -64,9 +64,11 @@
 
     <!-- Page-specific (main) content here -->
     <main class="main-container">
-    
-      <!--Animated Error Messages-->
-      <section id="error-message">
+
+      
+      <!--HTML for creating new tweet-->
+    <section class="new-tweet">
+      <h2 class="new-tweet-header">Compose Tweet</h2>
       <span id="error-message-empty" class="error-message-box">
         <i class="fas fa-exclamation-triangle" style= "color: red"></i>
         Please enter text before submitting a new Tweet!
@@ -77,11 +79,6 @@
         Please reduce your tweent content to less than or equal to 140 characters!
         <i class="fas fa-exclamation-triangle" style= "color: red"></i>
       </span>
-    </section>
-
-      <!--HTML for creating new tweet-->
-    <section class="new-tweet">
-      <h2 class="new-tweet-header">Compose Tweet</h2>
       <form action="/tweets" method="POST" id="new-tweet-form">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="new-tweet-footer">
