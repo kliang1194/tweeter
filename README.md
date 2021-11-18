@@ -9,6 +9,8 @@ This app provides the user with the ability to post tweets to a Tweet feed. This
 ## Core Features
 - Start by writing a tweet in the tweet box and clicking on "Tweet". This will "Submit" the tweet to the back-end via AJAX.
 - A successful POST request will then GET the tweet object back form the back-end and update the feed without having to refresh the page. 
+- Error messages will be displayed if an empty tweet or a tweet longer than 140 characters is being submitted. 
+- This app uses responsive design and will adjust depending on the display size. 
 
 ## Screenshots
 
