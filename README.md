@@ -20,12 +20,12 @@ This app provides the user with the ability to post tweets to a Tweet feed. This
 
 !["Screenshot of main Tweeter page with error message"](https://github.com/kliang1194/tweeter/blob/master/public/images/Tweeter-Error.png?raw=true)
 
-**Small Tweeter Page for Mobile View**
+**Condensed Tweeter Page for Mobile View**
 
 !["Screenshot of small main Tweeter page"](https://github.com/kliang1194/tweeter/blob/master/public/images/Tweeter-Main-Page-Small.png?raw=true)
 
 
-**Small Tweeter Page for Mobile View with an Error Message when Submitting an Empty Tweet**
+**Condensed Tweeter Page for Mobile View with an Error Message when Submitting an Empty Tweet**
 
 !["Screenshot of small main Tweeter page with error message"](https://github.com/kliang1194/tweeter/blob/master/public/images/Tweeter-Error-Small.png?raw=true)
 
