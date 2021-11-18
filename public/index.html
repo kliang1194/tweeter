@@ -4,6 +4,12 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+/>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -38,32 +44,35 @@
   <body>
     <!-- Top navigation bar (fixed) -->
     <nav>
-      <span class="a">Tweeter</span>
-      <span class="b">Write a new tweet<i class="fas fa-angle-double-down" style= "color: red"></i></span>
+      <span class="logo">Tweeter</span>
+      <span class="write-tweet">
+        <span class="write-new-tweet">Write a new tweet</span>
+      <i class="fas fa-angle-double-down" style= "color: red"></i>
+    </span>
     </nav>
 
     <!-- Header-->
     <header class="profile-header">
       <div class="user-image">
-          <img src="/images/profile-hex.png"> 
+          <img class="user-image" src="/images/profile-hex.png"> 
       </div>
       <br>
       <div class="user-name">
-          <h2><b>Kyle</b> Liang</h2>
+          <h2>Kyle Liang</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="main-container">
     
       <!--Animated Error Messages-->
       <section id="error-message">
-      <span id="error-message-empty" class="error-message">
+      <span id="error-message-empty" class="error-message-box">
         <i class="fas fa-exclamation-triangle" style= "color: red"></i>
         Please enter text before submitting a new Tweet!
         <i class="fas fa-exclamation-triangle" style= "color: red"></i>
       </span>
-      <span id="error-message-tooLong" class="error-message">
+      <span id="error-message-tooLong" class="error-message-box">
         <i class="fas fa-exclamation-triangle" style= "color: red"></i>
         Please reduce your tweent content to less than or equal to 140 characters!
         <i class="fas fa-exclamation-triangle" style= "color: red"></i>
@@ -72,10 +81,10 @@
 
       <!--HTML for creating new tweet-->
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <h2 class="new-tweet-header">Compose Tweet</h2>
       <form action="/tweets" method="POST" id="new-tweet-form">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div>
+        <div class="new-tweet-footer">
           <button id="submit" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
