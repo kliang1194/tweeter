@@ -22,7 +22,7 @@ nav {
   flex-direction: column;
 }
 
-span.write-tweet {
+div.write-tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,13 +31,7 @@ span.write-tweet {
 
 span.write-new-tweet {
   font-size: 1rem;
-  display: flex;
   font-family: "Arial Bold", sans-serif;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
 }
 
 
